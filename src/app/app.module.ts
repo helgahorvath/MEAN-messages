@@ -4,6 +4,7 @@ import {MatInputModule, MatCardModule, MatButtonModule, MatToolbarModule, MatExp
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {FormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import {PostCreateComponent} from './posts/post-create/post-create.component';
@@ -23,7 +24,8 @@ import {PostListComponent} from './posts/post-list/post-list.component';
     MatButtonModule,
     MatToolbarModule,
     FormsModule,
-    MatExpansionModule
+    MatExpansionModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
