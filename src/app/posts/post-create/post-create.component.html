@@ -1,5 +1,6 @@
 <mat-card>
-  <form (submit)="onSavePost(postForm)" #postForm="ngForm">
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+  <form (submit)="onSavePost(postForm)" #postForm="ngForm" *ngIf="!isLoading">
     <mat-form-field>
       <input type="text" matInput #postTitle="ngModel" [ngModel]="post?.title" name="title" placeholder="Title" required>
       <mat-error *ngIf="postTitle.invalid">Please enter a title</mat-error>
